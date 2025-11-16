@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rod Majuelo - Consultant Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* BASE STYLES */
+        :root {
+            --primary-color: #0077b6; /* LinkedIn Blue / Professional Accent */
+            --text-color: #333;
+            --light-bg: #f7f7f7;
+            --white-bg: #ffffff;
+            --font-inter: 'Inter', sans-serif;
+            --max-width: 900px;
+        }
+
+        body {
+            font-family: var(--font-inter);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            margin-bottom: 20px;
+            background-color: var(--white-bg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white-bg);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: var(--white-bg);
+            margin: 0 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            border-bottom: 2px solid var(--white-bg);
+        }
+
+        /* HERO SECTION */
+        #hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: var(--light-bg);
+            box-shadow: none;
+        }
+
+        #hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.1em;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            font-weight: 300;
+            margin-top: 0;
+        }
+
+        /* ABOUT SECTION */
+        #about p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* SKILLS SECTION */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-item {
+            background-color: var(--primary-color);
+            color: var(--white-bg);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            background-color: #005f93;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--text-color);
+            color: var(--light-bg);
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--primary-color);
+        }
+
+        /* MEDIA QUERIES (Responsiveness) */
+        @media (max-width: 600px) {
+            #hero h1 {
+                font-size: 2.5em;
+            }
+
+            #hero p {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Rod Majuelo</h1>
+            <p>IT Consultant & Technology Leader</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                As a highly motivated and results-driven IT professional, I specialize in digital transformation, cloud architecture, and strategic consulting. My experience includes leading cross-functional teams, managing large-scale infrastructure projects, and implementing solutions that drive business efficiency and innovation. I am passionate about leveraging technology to solve complex problems and deliver measurable value to clients across various industries.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Key Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Cloud Computing (AWS/Azure)</div>
+                <div class="skill-item">Digital Transformation</div>
+                <div class="skill-item">IT Strategy & Consulting</div>
+                <div class="skill-item">Project Management (Agile/Scrum)</div>
+                <div class="skill-item">Enterprise Architecture</div>
+                <div class="skill-item">Cybersecurity</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p style="text-align: center; font-size: 1.2em;">
+                I am always open to discussing new opportunities and challenges.
+                <br><br>
+                <strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a>
+                <br>
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rodmajuelo/" target="_blank">linkedin.com/in/rodmajuelo</a>
+                <br>
+                <strong>GitHub:</strong> <a href="https://github.com/rodmajuelojr" target="_blank">github.com/rodmajuelojr</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rod Majuelo. Built with pure HTML/CSS for a minimal, single-page experience.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

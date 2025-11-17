@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rod Majuelo - IT Consultant Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
         /* BASE STYLES & VARIABLES (Same as previous high-contrast version) */
         :root {
-            --primary-accent: #1D546C; 
-            --dark-blue: #0C2B4E; 
-            --text-dark: #1A3D64; 
-            --text-light: #F4F4F4; 
-            --section-bg: #F4F4F4; 
+            /* Color Hunt Palette: 0C2B4E, 1A3D64, 1D546C, F4F4F4 */
+            --primary-accent: #1D546C; /* Main Accent (Mid-Teal Blue) */
+            --dark-blue: #0C2B4E; /* Deep Night Background */
+            --text-dark: #1A3D64; /* Primary Text Color (Dark Blue) */
+            --text-light: #F4F4F4; /* Light Text for dark areas */
+            --section-bg: #F4F4F4; /* Section Backgrounds (White/Light Gray) */
             --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             --max-width: 1100px;
         }
@@ -128,9 +129,17 @@
             text-align: center;
         }
         
-        /* Use blockquote for emphasis/quote style */
+        /* TYPOGRAPHY HIGHLIGHTS */
+        /* Class for making key words/numbers BOLD and the ACCENT color */
+        .highlight {
+            color: var(--primary-accent);
+            font-weight: 800;
+            font-size: 1.05em; /* Slightly larger for visual pop */
+        }
+
+        /* Blockquote style for emphasis/quote style (Increased size) */
         blockquote {
-            font-size: 1.8em;
+            font-size: 2em; /* Larger quote text */
             font-weight: 300;
             line-height: 1.4;
             max-width: 900px;
@@ -175,6 +184,7 @@
             #hero p { font-size: 1.5em; }
             section { padding: 100px 0; }
             h2 { font-size: 2.5em; }
+            blockquote { font-size: 1.5em; }
         }
         @media (max-width: 500px) {
             #hero h1 { font-size: 3em; }
@@ -206,7 +216,7 @@
             <h2>OUR FOCUS: BRIDGING STRATEGY TO EXECUTION.</h2>
             
             <p>
-                My work as an IT Consultant is focused on the tangible results of digital transformation. I’m driven by the measurable outcome of migrating complex infrastructure to the cloud, governing large-scale architecture, and building efficient, Agile systems. **It's not just about the technology; it's about the business value it generates.**
+                My work as an IT Consultant is focused on the tangible results of <span class="highlight">digital transformation</span>. I’m driven by the measurable outcome of migrating complex infrastructure to the cloud, governing large-scale architecture, and building efficient, <span class="highlight">Agile systems</span>. It's not just about the technology; it's about the <span class="highlight">business value</span> it generates.
             </p>
             
             <div class="section-separator"></div>
@@ -214,7 +224,7 @@
             <h2 style="margin-bottom: 40px;">THE WORK</h2>
             
             <p>
-                When a challenge is presented, I approach it by first establishing a clear strategic roadmap. This involves deep expertise in **Cloud Computing** (AWS/Azure) and **Enterprise Architecture** to ensure the foundation is sound. We need to look beyond the immediate fix and establish sustainable, future-proof **governance models**.
+                When a challenge is presented, I approach it by first establishing a clear strategic roadmap. This involves deep expertise in <span class="highlight">Cloud Computing (AWS/Azure)</span> and <span class="highlight">Enterprise Architecture</span> to ensure the foundation is sound. We need to look beyond the immediate fix and establish sustainable, future-proof <span class="highlight">governance models</span>.
             </p>
 
             <blockquote>
@@ -222,7 +232,7 @@
             </blockquote>
             
             <p>
-                The impact of this approach is immediate and significant. For one client, this meant leading a legacy migration that resulted in a **35% reduction in operational costs**. For another, implementing a new Agile framework increased their feature delivery speed by a remarkable **40%**. Whether it's optimization or the deployment of a new zero-trust **Cybersecurity** strategy, my commitment is always to delivering measurable, competitive advantage.
+                The impact of this approach is immediate and significant. For one client, this meant leading a legacy migration that resulted in a <span class="highlight">35% reduction</span> in operational costs. For another, implementing a new Agile framework increased their feature delivery speed by a remarkable <span class="highlight">40%</span>. Whether it's optimization or the deployment of a new <span class="highlight">zero-trust Cybersecurity</span> strategy, my commitment is always to delivering measurable, competitive advantage.
             </p>
 
             <div class="section-separator"></div>

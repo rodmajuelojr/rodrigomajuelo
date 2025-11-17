@@ -7,13 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* BASE STYLES & VARIABLES */
+        /* BASE STYLES & VARIABLES (UPDATED WITH COLORHUNT PALETTE) */
         :root {
-            --primary-color: #0077b6; /* Professional Blue */
-            --text-color: #333;
-            --light-bg: #f4f4f9;
-            --white-bg: #ffffff;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            /* Color Hunt Palette: F7ECDE, E9DAC1, 9ED2C6, 54BAB9 */
+            --primary-color: #54BAB9; /* Main Accent (Dark Teal) */
+            --secondary-accent: #9ED2C6; /* Lighter Accent */
+            --text-color: #444; /* Dark Gray for Contrast */
+            --light-bg: #F7ECDE; /* Page Background (Light Cream/Beige) */
+            --white-bg: #E9DAC1; /* Section Backgrounds (Light Tan/Beige) */
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             --max-width: 1000px;
         }
 
@@ -64,7 +66,7 @@
             object-fit: cover;
             margin-bottom: 20px;
             border: 5px solid var(--primary-color);
-            box-shadow: 0 0 0 8px rgba(0, 119, 182, 0.2);
+            box-shadow: 0 0 0 8px rgba(84, 186, 185, 0.2); /* Shadow using primary color */
             transition: transform 0.3s;
         }
         #profile-pic:hover {
@@ -93,7 +95,7 @@
             animation: fadeIn 1.5s ease-out; /* Delayed animation */
         }
 
-        /* SKILLS GRID (kept minimal) */
+        /* SKILLS GRID */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -102,19 +104,20 @@
         }
 
         .skill-item {
-            background-color: var(--primary-color);
-            color: var(--white-bg);
+            background-color: var(--secondary-accent); /* Using the lighter accent color */
+            color: var(--text-color);
             padding: 8px 18px;
             border-radius: 4px;
             font-weight: 600;
             transition: background-color 0.3s, transform 0.3s;
         }
         .skill-item:hover {
-            background-color: #005f93;
+            background-color: var(--primary-color); /* Darker on hover */
+            color: #fff;
             transform: translateY(-2px);
         }
 
-        /* PROJECT CARDS (New Structure) */
+        /* PROJECT CARDS */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,27 +125,27 @@
         }
 
         .project-card {
-            background: var(--white-bg);
-            border: 1px solid #ddd;
+            background: var(--light-bg);
+            border: 1px solid var(--secondary-accent);
             border-radius: 8px;
             overflow: hidden;
             transition: box-shadow 0.3s, transform 0.3s;
         }
         .project-card:hover {
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px); /* Subtle animation on hover */
+            transform: translateY(-5px); 
         }
 
         .project-image-placeholder {
             width: 100%;
             height: 200px;
-            background-color: var(--light-bg);
+            background-color: var(--secondary-accent);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 0.9em;
-            color: var(--primary-color);
-            border-bottom: 1px solid #eee;
+            color: var(--text-color);
+            border-bottom: 1px solid var(--primary-color);
         }
 
         .project-content {
@@ -155,7 +158,7 @@
             font-size: 1.5em;
         }
 
-        /* FOOTER & NAVIGATION (kept minimal) */
+        /* FOOTER & NAVIGATION */
         header { background-color: var(--primary-color); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
         nav { display: flex; justify-content: center; }
         nav a { color: #fff; margin: 0 15px; font-weight: 600; text-transform: uppercase; transition: opacity 0.3s; }
@@ -185,7 +188,7 @@
 
     <section id="hero">
         <div class="container">
-            <img id="profile-pic" src="https://via.placeholder.com/150/0077b6/FFFFFF?text=R.M." alt="Rod Majuelo Profile Picture">
+            <img id="profile-pic" src="https://via.placeholder.com/150/54BAB9/444?text=R.M." alt="Rod Majuelo Profile Picture">
             
             <h1>Rod Majuelo</h1>
             <p>IT Consultant & Technology Leader</p>

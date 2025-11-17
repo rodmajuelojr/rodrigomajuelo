@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rod Majuelo - IT Consultant Profile </title>
+    <title>Rod Majuelo - IT Consultant Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -12,11 +12,11 @@
             /* Color Hunt Palette: 0C2B4E, 1A3D64, 1D546C, F4F4F4 */
             --primary-accent: #1D546C; /* Main Accent (Mid-Teal Blue) */
             --dark-blue: #0C2B4E; /* Deep Night Background */
-            --section-header-color: #1A3D64; /* Section Text/Header Color */
-            --light-text: #F4F4F4; /* Light Text for dark areas (Header/Footer) */
+            --text-dark: #1A3D64; /* Primary Text Color (Dark Blue) */
+            --text-light: #F4F4F4; /* Light Text for dark areas */
             --section-bg: #F4F4F4; /* Section Backgrounds (White/Light Gray) */
-            --shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            --max-width: 1000px;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            --max-width: 1100px;
         }
 
         /* FADE-IN ANIMATION */
@@ -28,15 +28,16 @@
         /* BODY & NIGHT TEXTURE */
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--section-header-color); /* Default text color for light sections */
+            color: var(--text-dark); 
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: var(--dark-blue);
-            background-image: radial-gradient(#1A3D64 1px, transparent 0),
-                              radial-gradient(#1A3D64 1px, transparent 0);
-            background-size: 50px 50px;
-            background-position: 0 0, 25px 25px;
+            /* Subtle dark grain texture */
+            background-image: radial-gradient(rgba(26, 61, 100, 0.5) 1px, transparent 0),
+                              radial-gradient(rgba(26, 61, 100, 0.5) 1px, transparent 0);
+            background-size: 80px 80px;
+            background-position: 0 0, 40px 40px;
             scroll-behavior: smooth;
         }
 
@@ -45,30 +46,30 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* CONTENT SECTIONS - Now Light for High Contrast */
+        
+        /* HIGH WHITESPACE SECTIONS */
         section {
-            padding: 80px 0;
-            margin-bottom: 30px;
+            padding: 150px 0; /* Massive vertical padding for whitespace */
+            margin-bottom: 20px;
             background-color: var(--section-bg);
             box-shadow: var(--shadow);
             border-radius: 8px;
             animation: fadeIn 1s ease-out; 
-            border: 1px solid var(--primary-accent); 
         }
 
         h2 {
-            font-size: 2.5em;
-            font-weight: 700;
-            color: var(--section-header-color);
-            margin-bottom: 40px;
+            font-size: 3em; /* Larger, impactful headers */
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 60px;
             text-align: center;
+            letter-spacing: -1px;
         }
         
-        /* HEADER & NAVIGATION (Dark Background, White/Bold Text) */
+        /* HEADER & NAVIGATION (Minimal) */
         header { 
             background-color: var(--dark-blue); 
-            padding: 15px 0; 
+            padding: 25px 0; /* Increased padding */
             position: sticky; 
             top: 0; 
             z-index: 100; 
@@ -76,98 +77,111 @@
         }
         nav { display: flex; justify-content: center; }
         nav a { 
-            color: var(--light-text); /* White Text */
-            margin: 0 15px; 
-            font-weight: 700; /* Thicker/Bold Text */
+            color: var(--text-light); 
+            margin: 0 30px; 
+            font-weight: 700; 
             text-transform: uppercase; 
-            transition: opacity 0.3s; 
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
-        nav a:hover { opacity: 0.8; }
+        nav a:hover { color: var(--primary-accent); }
 
-        /* HERO SECTION (Floats on Dark Background) */
+        /* HERO SECTION (Massive Typography Focus) */
         #hero {
             text-align: center;
-            padding: 120px 20px;
+            padding: 200px 20px;
             background: none; 
             box-shadow: none;
-            color: var(--light-text); /* White text for contrast on dark background */
+            color: var(--text-light); 
         }
 
-        #hero h1 { color: var(--light-text); font-weight: 800; } /* White, Extra Bold */
-        #hero p { color: var(--primary-accent); font-weight: 600; } 
+        #hero h1 { 
+            font-size: 5.5em; /* Massive type */
+            line-height: 1;
+            margin-bottom: 0.1em;
+            color: var(--text-light); 
+            font-weight: 800; 
+            letter-spacing: -3px;
+        } 
+        #hero p { 
+            font-size: 2em; 
+            color: var(--primary-accent); 
+            font-weight: 300; 
+            margin-top: 10px;
+        } 
         
-        /* PROFILE IMAGE STYLES */
+        /* PROFILE IMAGE STYLES - Smaller and integrated */
         #profile-pic {
-            border: 5px solid var(--primary-accent);
-            box-shadow: 0 0 0 8px rgba(29, 84, 108, 0.5); 
-            /* other styles kept for image appearance */
-            width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; transition: transform 0.3s;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 3px solid var(--primary-accent);
         }
-        #profile-pic:hover { transform: scale(1.05); }
 
-        /* SKILLS GRID */
-        .skills-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        .skill-item {
-            background-color: var(--section-header-color); /* Darker Skill pill */
-            color: var(--light-text); /* White Text */
-            padding: 8px 18px;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: background-color 0.3s, transform 0.3s;
-            border: 1px solid var(--primary-accent);
+        /* ABOUT SECTION CONTENT */
+        #about p {
+            font-size: 1.25em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            text-align: center;
         }
-        .skill-item:hover {
+        
+        .section-separator {
+            width: 100px;
+            height: 3px;
             background-color: var(--primary-accent);
-            transform: translateY(-2px);
+            margin: 80px auto;
+            opacity: 0.5;
         }
 
-        /* PROJECT CARDS (Now Darker Cards on Light Section Background) */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card {
-            background: var(--section-header-color); /* Project card is dark blue */
-            border: 1px solid var(--primary-accent);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: box-shadow 0.3s, transform 0.3s;
-        }
-        .project-card:hover {
-            box-shadow: 0 0 15px rgba(29, 84, 108, 0.8);
-            transform: translateY(-5px); 
-        }
-
-        .project-image-placeholder {
-            width: 100%;
-            height: 200px;
-            background-color: var(--primary-accent);
+        /* MINIMAL LISTS (for Skills/Projects) */
+        .minimal-list {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            font-size: 0.9em;
-            color: var(--light-text); /* White text */
-            border-bottom: 1px solid var(--dark-blue);
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
         }
-        .project-content { padding: 20px; color: var(--light-text); } /* Project text is white */
-        .project-content h3 { color: var(--light-text); margin-top: 0; font-size: 1.5em; }
+        .minimal-list li {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            text-align: center;
+            padding: 0 20px;
+            transition: color 0.3s;
+        }
+        .minimal-list li:hover {
+            color: var(--primary-accent);
+        }
 
         /* FOOTER & LINKS */
         footer { 
             text-align: center; 
-            padding: 30px 0; 
+            padding: 40px 0; 
             background-color: var(--dark-blue); 
-            color: var(--light-text); /* White text */
+            color: var(--text-light); 
         }
-        a { color: var(--primary-accent); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; color: var(--section-header-color); } /* Link hover color in light sections */
+        footer a { color: var(--primary-accent); text-decoration: none; font-weight: 600; }
+        footer a:hover { color: var(--text-light); }
+        a { color: var(--primary-accent); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        a:hover { text-decoration: underline; color: var(--text-dark); }
         
-        /* Links in Dark Areas (like Footer) */
-        footer a { color: var(--primary-accent); }
-        footer a:hover { color: var(--light-text); }
 
-
-        @media (max-width: 600px) {
-            #hero h1 { font-size: 2.8em; }
-            #hero p { font-size: 1.3em; }
-            section { padding: 50px 0; }
+        @media (max-width: 800px) {
+            #hero h1 { font-size: 4em; }
+            #hero p { font-size: 1.5em; }
+            section { padding: 100px 0; }
+            h2 { font-size: 2.5em; }
+            .minimal-list li { font-size: 1.2em; }
+        }
+        @media (max-width: 500px) {
+            #hero h1 { font-size: 3em; }
         }
     </style>
 </head>
@@ -176,9 +190,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#hero">Home</a>
                 <a href="#about">About</a>
-                <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -186,84 +198,52 @@
 
     <section id="hero">
         <div class="container">
-            <img id="profile-pic" src="https://via.placeholder.com/150/1D546C/F4F4F4?text=R.M." alt="Rod Majuelo Profile Picture">
+            <img id="profile-pic" src="https://via.placeholder.com/100/1D546C/F4F4F4?text=R.M." alt="Rod Majuelo Profile Picture">
             
-            <h1>Rod Majuelo</h1>
+            <h1>ROD MAJUELO</h1>
             <p>IT Consultant & Technology Leader</p>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1em;">
-                As a highly motivated and results-driven IT professional, I specialize in digital transformation, cloud architecture, and strategic consulting. My experience includes leading cross-functional teams, managing large-scale infrastructure projects, and implementing solutions that drive business efficiency and innovation. I am passionate about leveraging technology to solve complex problems and deliver measurable value to clients across various industries.
+            <h2>STRATEGY. CLOUD. EXECUTION.</h2>
+            
+            <p>
+                As a highly motivated and results-driven IT professional, I specialize in digital transformation, cloud architecture, and strategic consulting. My passion lies in leveraging technology to solve complex business problems, driving efficiency, and delivering measurable value across various industries. I focus on bridging the gap between enterprise vision and technical execution.
             </p>
-        </div>
-    </section>
+            
+            <div class="section-separator"></div>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Key Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Cloud Computing (AWS/Azure)</div>
-                <div class="skill-item">Digital Transformation</div>
-                <div class="skill-item">IT Strategy & Consulting</div>
-                <div class="skill-item">Project Management (Agile/Scrum)</div>
-                <div class="skill-item">Enterprise Architecture</div>
-                <div class="skill-item">Cybersecurity</div>
-            </div>
-        </div>
-    </section>
+            <h2 style="margin-bottom: 40px;">CORE EXPERTISE</h2>
+            <ul class="minimal-list">
+                <li>Cloud Computing & Architecture (AWS / Azure)</li>
+                <li>Digital Transformation Strategy</li>
+                <li>Enterprise Architecture & Governance</li>
+                <li>Agile Leadership & Project Delivery</li>
+                <li>Modern Cybersecurity Frameworks</li>
+            </ul>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        IMAGE PLACEHOLDER (Digital Transformation)
-                    </div>
-                    <div class="project-content">
-                        <h3>Cloud Migration & Cost Optimization</h3>
-                        <p>Led a 6-month initiative to migrate a legacy infrastructure to a secure, hybrid cloud environment, resulting in a **35% reduction** in operational costs and 99.9% uptime.</p>
-                        <a href="#contact">Read Case Study &rarr;</a>
-                    </div>
-                </div>
+            <div class="section-separator"></div>
+            
+            <h2 style="margin-bottom: 40px;">HIGHLIGHTED PROJECTS</h2>
+            <ul class="minimal-list">
+                <li>Led infrastructure migration, reducing operational costs by 35%.</li>
+                <li>Implemented enterprise-wide Agile methodology, increasing feature delivery by 40%.</li>
+                <li>Designed zero-trust security architecture for major financial client.</li>
+            </ul>
 
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        IMAGE PLACEHOLDER (Agile Implementation)
-                    </div>
-                    <div class="project-content">
-                        <h3>Agile Framework Implementation</h3>
-                        <p>Designed and deployed an organization-wide Agile/Scrum framework for the Product Development team, increasing feature delivery velocity by **40%** in the first quarter.</p>
-                        <a href="#contact">Read Case Study &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        IMAGE PLACEHOLDER (Security & Strategy)
-                    </div>
-                    <div class="project-content">
-                        <h3>Enterprise Cybersecurity Strategy</h3>
-                        <p>Developed a zero-trust security architecture and training program for a finance client, reducing critical vulnerability exposure by **85%** and ensuring compliance with industry standards.</p>
-                        <a href="#contact">Read Case Study &rarr;</a>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2>LET'S DISCUSS YOUR NEXT CHALLENGE.</h2>
+            <p style="text-align: center; font-size: 1.5em; max-width: 700px; margin: 0 auto;">
+                I am currently open to strategic IT consulting roles and projects where innovation meets measurable results.
+            </p>
+            <br><br>
             <p style="text-align: center; font-size: 1.2em;">
-                I am currently open to strategic IT consulting roles and projects.
-                <br><br>
                 <strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a>
                 <br>
                 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rodmajuelo/" target="_blank">linkedin.com/in/rodmajuelo</a>
@@ -273,7 +253,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Rod Majuelo. Simple, modern, and static one-pager.</p>
+            <p>&copy; 2024 Rod Majuelo. Minimalist Static Portfolio.</p>
         </div>
     </footer>
 

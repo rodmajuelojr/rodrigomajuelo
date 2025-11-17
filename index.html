@@ -7,14 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* BASE STYLES & VARIABLES */
+        /* BASE STYLES & VARIABLES (Same as previous high-contrast version) */
         :root {
-            /* Color Hunt Palette: 0C2B4E, 1A3D64, 1D546C, F4F4F4 */
-            --primary-accent: #1D546C; /* Main Accent (Mid-Teal Blue) */
-            --dark-blue: #0C2B4E; /* Deep Night Background */
-            --text-dark: #1A3D64; /* Primary Text Color (Dark Blue) */
-            --text-light: #F4F4F4; /* Light Text for dark areas */
-            --section-bg: #F4F4F4; /* Section Backgrounds (White/Light Gray) */
+            --primary-accent: #1D546C; 
+            --dark-blue: #0C2B4E; 
+            --text-dark: #1A3D64; 
+            --text-light: #F4F4F4; 
+            --section-bg: #F4F4F4; 
             --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             --max-width: 1100px;
         }
@@ -49,7 +48,7 @@
         
         /* HIGH WHITESPACE SECTIONS */
         section {
-            padding: 150px 0; /* Massive vertical padding for whitespace */
+            padding: 150px 0; 
             margin-bottom: 20px;
             background-color: var(--section-bg);
             box-shadow: var(--shadow);
@@ -58,7 +57,7 @@
         }
 
         h2 {
-            font-size: 3em; /* Larger, impactful headers */
+            font-size: 3em; 
             font-weight: 800;
             color: var(--text-dark);
             margin-bottom: 60px;
@@ -69,7 +68,7 @@
         /* HEADER & NAVIGATION (Minimal) */
         header { 
             background-color: var(--dark-blue); 
-            padding: 25px 0; /* Increased padding */
+            padding: 25px 0; 
             position: sticky; 
             top: 0; 
             z-index: 100; 
@@ -96,7 +95,7 @@
         }
 
         #hero h1 { 
-            font-size: 5.5em; /* Massive type */
+            font-size: 5.5em; 
             line-height: 1;
             margin-bottom: 0.1em;
             color: var(--text-light); 
@@ -129,35 +128,33 @@
             text-align: center;
         }
         
+        /* Use blockquote for emphasis/quote style */
+        blockquote {
+            font-size: 1.8em;
+            font-weight: 300;
+            line-height: 1.4;
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 40px;
+            color: var(--primary-accent);
+            text-align: center;
+            border-left: 5px solid var(--primary-accent);
+        }
+        blockquote footer {
+            margin-top: 15px;
+            font-size: 0.7em;
+            color: var(--text-dark);
+            background: none;
+            padding: 0;
+            text-align: center;
+        }
+
         .section-separator {
             width: 100px;
             height: 3px;
             background-color: var(--primary-accent);
             margin: 80px auto;
             opacity: 0.5;
-        }
-
-        /* MINIMAL LISTS (for Skills/Projects) */
-        .minimal-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            list-style: none;
-            padding: 0;
-            margin: 0 auto;
-            max-width: 600px;
-        }
-        .minimal-list li {
-            font-size: 1.5em;
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: var(--text-dark);
-            text-align: center;
-            padding: 0 20px;
-            transition: color 0.3s;
-        }
-        .minimal-list li:hover {
-            color: var(--primary-accent);
         }
 
         /* FOOTER & LINKS */
@@ -178,7 +175,6 @@
             #hero p { font-size: 1.5em; }
             section { padding: 100px 0; }
             h2 { font-size: 2.5em; }
-            .minimal-list li { font-size: 1.2em; }
         }
         @media (max-width: 500px) {
             #hero h1 { font-size: 3em; }
@@ -207,38 +203,41 @@
 
     <section id="about">
         <div class="container">
-            <h2>STRATEGY. CLOUD. EXECUTION.</h2>
+            <h2>OUR FOCUS: BRIDGING STRATEGY TO EXECUTION.</h2>
             
             <p>
-                As a highly motivated and results-driven IT professional, I specialize in digital transformation, cloud architecture, and strategic consulting. My passion lies in leveraging technology to solve complex business problems, driving efficiency, and delivering measurable value across various industries. I focus on bridging the gap between enterprise vision and technical execution.
+                My work as an IT Consultant is focused on the tangible results of digital transformation. I’m driven by the measurable outcome of migrating complex infrastructure to the cloud, governing large-scale architecture, and building efficient, Agile systems. **It's not just about the technology; it's about the business value it generates.**
             </p>
             
             <div class="section-separator"></div>
 
-            <h2 style="margin-bottom: 40px;">CORE EXPERTISE</h2>
-            <ul class="minimal-list">
-                <li>Cloud Computing & Architecture (AWS / Azure)</li>
-                <li>Digital Transformation Strategy</li>
-                <li>Enterprise Architecture & Governance</li>
-                <li>Agile Leadership & Project Delivery</li>
-                <li>Modern Cybersecurity Frameworks</li>
-            </ul>
+            <h2 style="margin-bottom: 40px;">THE WORK</h2>
+            
+            <p>
+                When a challenge is presented, I approach it by first establishing a clear strategic roadmap. This involves deep expertise in **Cloud Computing** (AWS/Azure) and **Enterprise Architecture** to ensure the foundation is sound. We need to look beyond the immediate fix and establish sustainable, future-proof **governance models**.
+            </p>
+
+            <blockquote>
+                "My mission is simple: increase feature delivery velocity by stabilizing the core infrastructure. You can't out-innovate a broken system."
+            </blockquote>
+            
+            <p>
+                The impact of this approach is immediate and significant. For one client, this meant leading a legacy migration that resulted in a **35% reduction in operational costs**. For another, implementing a new Agile framework increased their feature delivery speed by a remarkable **40%**. Whether it's optimization or the deployment of a new zero-trust **Cybersecurity** strategy, my commitment is always to delivering measurable, competitive advantage.
+            </p>
 
             <div class="section-separator"></div>
             
-            <h2 style="margin-bottom: 40px;">HIGHLIGHTED PROJECTS</h2>
-            <ul class="minimal-list">
-                <li>Led infrastructure migration, reducing operational costs by 35%.</li>
-                <li>Implemented enterprise-wide Agile methodology, increasing feature delivery by 40%.</li>
-                <li>Designed zero-trust security architecture for major financial client.</li>
-            </ul>
+            <h2 style="margin-bottom: 40px;">LET'S TALK VALUE</h2>
+            <p style="font-weight: 600;">
+                If you are looking for a technology leader who can translate visionary strategy into efficient, large-scale implementation—and back it up with hard numbers—let's connect.
+            </p>
 
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
-            <h2>LET'S DISCUSS YOUR NEXT CHALLENGE.</h2>
+            <h2>GET IN TOUCH.</h2>
             <p style="text-align: center; font-size: 1.5em; max-width: 700px; margin: 0 auto;">
                 I am currently open to strategic IT consulting roles and projects where innovation meets measurable results.
             </p>
